@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-<html>
+{% block title_block %}
+    About
+{% endblock %}
 
-	<head>
-		<title>About</title>
-	</head>
-
-	<body>
+{% block body_block %}
+	<h3>{{ aboutmessage }}</h3>
+	<h4>This tutorial has been put together by Jamie Sinclair</h4>
 	
-		<h3>{{ aboutmessage }}</h3>
-		<h4>This tutorial has been put together by Jamie Sinclair</h4>
-		
-		<img src="{% static "images/UofGCrest.jpg" %}"alt="UofG Crest" />
-		<img src="{{ MEDIA_URL }}cat.jpg" />
-		<div>
-			<a href="/rango">Index</a><br />
-		</div>
-		
-	</body>
+	<img src="{% static "images/UofGCrest.jpg" %}"alt="UofG Crest" />
+	<img src="{{ MEDIA_URL }}cat.jpg" />
+{% endblock %}
 
-</html>
+
